@@ -411,3 +411,72 @@ body{
 .rec{
     display: block;
 }
+.head{
+    color: #0011ff;
+}
+.rec{
+    color: #8000ff;
+}
+.textt{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#user_input_form{
+    display: flex;
+    gap:10px;
+}
+#user_input{
+    flex-grow: 1;
+}
+
+
+
+.navbar {
+    background: linear-gradient(to right, #ea00ff, #FF3399);
+    padding: 10px;
+    border: solid green 2px;
+}
+
+/* Styling for the navbar container */
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Styling for the logo */
+.nav-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+/* Styling for the navigation links */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+/* Gradient colors for the navigation links */
+.nav-links li a {
+    background: linear-gradient(to right, #0099FF, #3347ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+/* Hover effect for the navigation links */
+.nav-links li a:hover {
+    transform: scale(1.1);
+}
+.nav-logo{
+    color: #3347ff;
+}

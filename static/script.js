@@ -56,13 +56,15 @@ $(document).ready(function() {
                 // Replace the search results container with the rendered HTML from the server
                 console.log(data)
                 if (data=="not found"){
+                    $(".items").html("")
                     $(".head").html("Sorry, book not found.Please try different book!")
                     $(".rec").html(``);
+                    
                 }
                 else{
                     $("body").html(data);
                     $(".head").html(`You searched for: ${user_input}`);
-                    $(".rec").html(`Recommended books: `);
+                    $(".rec").html(`->Recommended books: `);
                 }    
                 
 

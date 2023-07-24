@@ -11,11 +11,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <nav class="navbar">
         <div class="navbar-container">
-            <a href="#" class="nav-logo">MyWebsite</a>
+            <a href="#" class="nav-logo">Classy Book Recommendations</a>
             <ul class="nav-links">
-                <li><a href="#">Code</a></li>
-                <li><a href="#">Dataset</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="https://github.com/virendrasinh734/book_recommendation_engine">Code</a></li>
+                <li><a href="http://www2.informatik.uni-freiburg.de/~cziegler/BX/">Dataset</a></li>
+                <li style="color: #3347ff;">Omne Ignotum Pro Magnifico</li>
             </ul>
         </div>
     </nav>
@@ -23,7 +23,7 @@
 
     
     <div class="header">
-        <h2 style="color: blueviolet;">Get Recommendations</h2>
+        <h2 style="color: rgb(210, 243, 26);">Get Recommendations</h2>
     </div>
     
     <div class="content">
@@ -34,20 +34,22 @@
         <h3 style="color: blueviolet;">Seek and Thou Shall Find"</h3>
         <form id="user_input_form">
             <div class="autocomplete">
-                <input id="user_input" name="user_input" type="text" class="form-control" autocomplete="off">
+                <input id="user_input" name="user_input" placeholder="Type book name here" type="text" class="form-control" autocomplete="off">
                 <div id="suggestions-dropdown" class="dropdown-content">
                 </div>
             </div>
             <input id="submit-button" type="submit" class="btn btn-primary" value="Search">
         </form>
     </div>
-    <div class="items">
+    <div class="textt">
         <p class="head"></p>
         <p class="rec"></p>
+    </div>
+    <div class="items">
         {% if data %}
             {% for i in data %}
                 <div class="box">
-                    <p style="color: rgb(7, 146, 123);">{{i[0]}} by {{i[1]}}</p>
+                    <p style="color: rgb(7, 146, 123);"> &#128214 {{i[0]}} by {{i[1]}}</p>
                     <!-- <img class="card-img-top" src='{{i[2]}}' style="width:160px; height: 160px;"> -->
                 </div>
             {% endfor %}
