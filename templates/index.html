@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Recommendation Engine</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body style="background-color: ivory;">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="nav-logo">MyWebsite</a>
+            <ul class="nav-links">
+                <li><a href="#">Code</a></li>
+                <li><a href="#">Dataset</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+
+    
+    <div class="header">
+        <h2 style="color: blueviolet;">Get Recommendations</h2>
+    </div>
+    
+    <div class="content">
+
+    
+    <div class="form-field">
+        <h3 style="color: blueviolet;">"Ask and Thou Shall Receive</h3>
+        <h3 style="color: blueviolet;">Seek and Thou Shall Find"</h3>
+        <form id="user_input_form">
+            <div class="autocomplete">
+                <input id="user_input" name="user_input" type="text" class="form-control" autocomplete="off">
+                <div id="suggestions-dropdown" class="dropdown-content">
+                </div>
+            </div>
+            <input id="submit-button" type="submit" class="btn btn-primary" value="Search">
+        </form>
+    </div>
+    <div class="items">
+        <p class="head"></p>
+        <p class="rec"></p>
+        {% if data %}
+            {% for i in data %}
+                <div class="box">
+                    <p style="color: rgb(7, 146, 123);">{{i[0]}} by {{i[1]}}</p>
+                    <!-- <img class="card-img-top" src='{{i[2]}}' style="width:160px; height: 160px;"> -->
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <!-- {% if rc %}
+        <p>Data is available!</p>
+    {% else %}
+        <p>No data found.</p>
+    {% endif %} -->
+    </div>
+    <!-- <div class="footer">
+        <h2 style="color: blueviolet;">Omne Ignotum Pro Magnifico</h2>
+    </div> -->
+
+    <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+    
+</body>
+</html>
